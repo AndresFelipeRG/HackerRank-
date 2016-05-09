@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+B = input().strip()
+
+def find_substr(ref_str, find_str, n):
+    list_index = []
+    for j in range(n):
+        if find_str[j:j+3]==ref_str:
+            list_index.append(j)
+    return list_index
+def check_list(list_index,n):
+    value = len(list_index)
+    value2 = 0
+    for j in range(len(list_index)):
+        if  j+1 < len(list_index)-1:
+            if list_index[j]+3 > list_index[j+1]:
+                value2 = value2+1
+    for j in range(value2):
+        value = value-2+1    
+        
+    return value            
+        
+    
+lists = find_substr("010",B,n)
+
+
+print (check_list(lists,n))
