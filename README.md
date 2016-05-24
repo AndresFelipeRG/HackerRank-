@@ -9,6 +9,7 @@ https://en.wikipedia.org/wiki/Modular_exponentiation.
 
 (a*b)%n = (a%n * b %n)%n
 
+#Next Square
 
 n^2 = (n-1)^2 + (n-1) + n
 
