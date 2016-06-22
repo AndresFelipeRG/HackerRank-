@@ -8,7 +8,7 @@ orders = [[x,[]] for x in  range(d+1)]
 for i in range(d):
     num = int(input())
     lst[num][0]= lst[num][0]+1
-
+lst.sort()
 #print(lst)
 for [a,b] in lst:
     orders[a][1] += [b]
