@@ -18,6 +18,10 @@ n^2 = (n-1)^2 + (n-1) + n
 
 For every unique  prime factor there are (a+1)(b+1)... possible factors. For a square number x^2: every factor less than x, there is a factor greater than x. Thus, there are (a+1)(b+1).../2 factors less than x - including 1.
 
+Any pair of integers, not both zero, can be reduced to a pair of coprime ones by dividing them by their GCD:
+
+gcd{a,b}=d⟺ad,bd∈ℤ∧gcd{ad,bd}=1
+
 
 #Samantha and portfolio management
 
