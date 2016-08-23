@@ -59,3 +59,19 @@ The optimal solution is : Sort the elements of the matrix and store them in an a
 Now the number of inversions will be equal to the number of elements processed till now in the submatrix  because the elements marked in this submatrix are greater than the current element . This can be counted using a 2-D binary indexed tree in  . 
 
 Thus the total complexity of the solution is : O(n^2log(n))
+
+#Pair selection
+
+The given problem can be modelled as a bipartite graph with N vertices on the left side and M vertices on the right side and there is and edge between vertex i on left and vertex j on right if . 
+Now,choosing the K pairs can be thought of as choosing a matching in the bipartite graph having K edges such that for every edge connecting , one of the  or  is good, where the definition of good is given in the problem statement. 
+Now we need to find a matching having largest number of edges satisfying the above properties.
+Claim : The maximum matching in a bipartite graph would always satify the above properties. ** 
+**Proof : Let us consider any maximum matching of the bipartite graph. If every pair  is good, then we are done. Suppose there exists a pair  in the matching such that both the  and  are not good. This means there exists a neighbour  of  which is not in the matching and there exists a neighbour  of  which is not in the matching. Hence, we can remove the edge  from the set of selected edges in the matching and add the edges  and  , and hence increase the size of the maximum matching by 1. This leads us to a contradiction. Hence, in a maximum matching no such pair would exist.
+Now, we know that every maximum matching of the graph meets the conditions. Since any other matching that satisfies the conditions would have a size less equal the size of the maximum matching, hence the size of the maximum matching is the required answer.
+
+#Guga travelling
+Introduction
+If you look at the problem constraints you will notice that while the graph can contain 2000 normal edges it can only contain 10 special edges.
+
+I therefore approaced this by reducing the graph using the normal Dijkstra's algorithm and then augmenting Dijkstra's algorithm with bitmasks on the reduced graph to find the solution.
+
