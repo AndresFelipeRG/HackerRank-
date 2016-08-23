@@ -85,3 +85,11 @@ V2: Sum of all the frequencies of characters that are required in  but not prese
 Now the Transformation Cost function can be defined as: V1(A) + V2(B) +Z(C-A-B). A = delete, B = insert.
 
 A, B, C are the operations costs as defined in the problem. Z is the total no. of Replace Operations performed.
+#Minimum connected component
+
+Using DSU, after each operation we can have connected components.
+Let's have a multiset of weights of connected components. Initially, it is weight of each node. When two connected component is mergered, both weights will be deleted form multiset and sum of them will be inserted. For example, if weights are  and , C++ code will be like:
+mymultiset.erase(mymultiset.find(X));
+mymultiset.erase(mymultiset.find(Y));
+mymultiset.insert(X+Y);
+after each operation you have to print minimum element in this multiset. (it's possible to use any binary tree instead multset).
