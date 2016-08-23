@@ -79,9 +79,9 @@ I therefore approaced this by reducing the graph using the normal Dijkstra's alg
 As we need to transform a given  to  so that  and  can be anagrams. Thus we can calculate the transformation cost by the analysis of frequency of each letters in both the strings.
 
 Lets define the following two variables:
-: Sum of all the frequencies of characters that are present in  but not required in .
-: Sum of all the frequencies of characters that are required in  but not present in .
+V1: Sum of all the frequencies of characters that are present in  but not required in .
+V2: Sum of all the frequencies of characters that are required in  but not present in .
 
-Now the Transformation Cost function can be defined as:
+Now the Transformation Cost function can be defined as: V1(A) + V2(B) +Z(C-A-B). A = delete, B = insert.
 
 A, B, C are the operations costs as defined in the problem. Z is the total no. of Replace Operations performed.
