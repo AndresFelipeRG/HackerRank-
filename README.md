@@ -75,3 +75,13 @@ If you look at the problem constraints you will notice that while the graph can 
 
 I therefore approaced this by reducing the graph using the normal Dijkstra's algorithm and then augmenting Dijkstra's algorithm with bitmasks on the reduced graph to find the solution.
 
+#Minimum tranformation cost
+As we need to transform a given  to  so that  and  can be anagrams. Thus we can calculate the transformation cost by the analysis of frequency of each letters in both the strings.
+
+Lets define the following two variables:
+: Sum of all the frequencies of characters that are present in  but not required in .
+: Sum of all the frequencies of characters that are required in  but not present in .
+
+Now the Transformation Cost function can be defined as:
+
+A, B, C are the operations costs as defined in the problem. Z is the total no. of Replace Operations performed.
