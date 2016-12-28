@@ -5,9 +5,9 @@ vol = n*a*b*c
 d = vol**(1.0/3.0)
 #s = math.floor(max(d/a, d/b, d/c))
 #print(d/a, d/b, d/c)
-a11 = math.floor(d/a)-2
-a12 = math.floor(d/b)-2
-a13 = math.floor(d/c)-3
+a11 = math.floor(d/a)-1
+a12 = math.floor(d/b)-1
+a13 = math.floor(d/c)-1
 #print(a11, a12, a13)
 if a11 <= 0:
     a11 = 1
