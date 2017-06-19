@@ -2,7 +2,7 @@ import java.util.*;
 class Queue<E>{
   private class Element<E>{
     private E data;
-    privat Element<E> next;
+    private Element<E> next;
     
     Element(E data){
         this.data = data;
